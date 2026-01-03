@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Niraj Sharan | Strategic Digital Partnerships & Product Leader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font Awesome CDN [web:7][web:15] -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-/+qvXwD+P0m6mTzc0sI2i9lFwhs9GJtqUq+s0g0N5sKpB7N3Fh3+v6y3JgqG+QJ4G0nq2f+H6bZg+TtV6r0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --bg-main: #050816;
+      --bg-alt: #0b1020;
+      --accent: #27c6ff;
+      --accent-soft: rgba(39, 198, 255, 0.2);
+      --accent-strong: #00ffa3;
+      --text-main: #eef2ff;
+      --text-muted: #9ca3af;
+      --card-bg: #111827;
+      --border-subtle: rgba(148, 163, 184, 0.2);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --transition-fast: 200ms ease-out;
+      --transition-med: 280ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 42%, #020617 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 72px;
+    }
+
+    @media (min-width: 1024px) {
+      .page-shell {
+        padding: 32px 0 96px;
+      }
+    }
+
+    header.site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 16px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: conic-gradient(from 220deg, #22d3ee, #4ade80, #a855f7, #22d3ee);
+      position: relative;
+      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.4), 0 10px 30px rgba(15, 23, 42, 0.8);
+    }
+
+    .brand-logo::after {
+      content: "NS";
+      position: absolute;
+      inset: 2px;
+      border-radius: 10px;
+      background: radial-gradient(circle at top left, #020617 0, #020617 50%, #020617 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-text .name {
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-text .title {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    nav.site-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    nav.site-nav a {
+      position: relative;
+      padding-bottom: 2px;
+      cursor: pointer;
+      transition: color var(--transition-fast);
+    }
+
+    nav.site-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transition: width var(--transition-fast);
+    }
+
+    nav.site-nav a:hover {
+      color: var(--text-main);
+    }
+
+    nav.site-nav a:hover::after {
+      width: 100%;
+    }
+
+    nav.site-nav .nav-cta {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+      color: #020617;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 10px 20px rgba(34, 211, 238, 0.35);
+    }
+
+    nav.site-nav .nav-cta i {
+      font-size: 12px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3.1fr) minmax(0, 2.2fr);
+      gap: 32px;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .hero-copy {
+      padding: 20px 22px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #111827 0, #020617 58%, #020617 100%);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0 0, rgba(34, 211, 238, 0.18) 0, transparent 55%);
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-muted);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: radial-gradient(circle, var(--accent-strong), #22d3ee);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 3.1vw, 36px);
+      line-height: 1.2;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 span.highlight {
+      background: linear-gradient(120deg, #e5e7eb, #f97316, #22c55e);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 560px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-chip {
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 6px 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-chip strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .hero-chip i {
+      color: var(--accent);
+      font-size: 11px;
+    }
+
+    .typing-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .typing-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .typing-pills {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .typing-pill {
+      position: relative;
+      min-width: 140px;
+      max-width: 100%;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.95);
+      font-size: 13px;
+      color: #e5e7eb;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .typing-pill span {
+      position: relative;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: var(--radius-pill);
+      padding: 9px 16px;
+      border: 1px solid transparent;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+      color: #020617;
+      box-shadow: 0 16px 35px rgba(34, 197, 235, 0.6);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 45px rgba(34, 197, 235, 0.7);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main);
+      border-color: rgba(148, 163, 184, 0.5);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-1px);
+      border-color: rgba(148, 163, 184, 0.9);
+    }
+
+    .hero-visual {
+      position: relative;
+      border-radius: 24px;
+      padding: 18px 18px 20px;
+      background: radial-gradient(circle at 10% 0, rgba(59, 130, 246, 0.18), transparent 52%), radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.16), transparent 52%), #020617;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      min-height: 260px;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 0 0, rgba(148, 163, 184, 0.45) 0, transparent 55%), radial-gradient(circle at 100% 100%, rgba(39, 198, 255, 0.35) 0, transparent 55%);
+      opacity: 0.8;
+      mix-blend-mode: soft-light;
+      pointer-events: none;
+    }
+
+    .profile-card {
+      position: relative;
+      z-index: 1;
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.98);
+      padding: 14px 14px 14px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+      backdrop-filter: blur(12px);
+    }
+
+    .profile-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 22px;
+      background: radial-gradient(circle at 30% 0, #38bdf8 0, #6366f1 40%, #22c55e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 700;
+      color: #020617;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.9);
+      border: 2px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .profile-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      justify-content: center;
+    }
+
+    .profile-meta h2 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .profile-meta .role {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .profile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .profile-tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .side-badges {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .side-badge {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.92);
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .side-badge strong {
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .side-badge i {
+      color: var(--accent);
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title span.bar {
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 420px;
+    }
+
+    .timeline-wrapper {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 7px;
+      top: 4px;
+      bottom: 4px;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(148, 163, 184, 0.5), rgba(15, 23, 42, 0.2));
+    }
+
+    .timeline-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -20px;
+      top: 12px;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle, var(--accent-strong), #22c55e);
+      box-shadow: 0 0 0 4px rgba(34, 197, 235, 0.25);
+    }
+
+    .timeline-card {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med), background var(--transition-med);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+      border-color: rgba(56, 189, 248, 0.7);
+      background: #020617;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-role {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .timeline-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .timeline-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .timeline-meta i {
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    .timeline-summary {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .timeline-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-pill {
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--text-muted);
+    }
+
+    .timeline-details {
+      margin-top: 4px;
+      display: none;
+    }
+
+    .timeline-details.open {
+      display: block;
+    }
+
+    .timeline-details ul {
+      margin-left: 14px;
+      margin-top: 4px;
+    }
+
+    .timeline-details li {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+
+    .timeline-toggle {
+      font-size: 11px;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .project-card {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 10px 11px;
+      min-height: 120px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med), background var(--transition-med);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+      border-color: rgba(56, 189, 248, 0.7);
+      background: #020617;
+    }
+
+    .project-tag {
+      font-size: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .project-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .project-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+    }
+
+    .project-pill {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-muted);
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 40;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      max-width: 640px;
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), #020617 55%, #020617 100%);
+      padding: 18px 18px 16px;
+      box-shadow: 0 20px 80px rgba(15, 23, 42, 0.95);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      border-radius: 999px;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .modal-header {
+      margin-bottom: 10px;
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .modal-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .modal-tagline {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    .star-block {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 10px 12px;
+    }
+
+    .star-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .star-body {
+      font-size: 12px;
+      color: var(--text-main);
+    }
+
+    .skills-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.15fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .skills-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .skills-card {
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 14px 14px 12px;
+    }
+
+    .skills-card h3 {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .skills-card p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .skill-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .skill-label {
+      width: 42%;
+      font-size: 11px;
+      color: var(--text-main);
+    }
+
+    .skill-meter {
+      flex: 1;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(31, 41, 55, 1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transform-origin: left center;
+      transform: scaleX(0);
+      transition: transform 900ms ease-out;
+    }
+
+    .skill-score {
+      width: 32px;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .tag-soft {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+      color: var(--text-muted);
+    }
+
+    .testimonials-shell {
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 14px 14px 12px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .testimonials-shell {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .testimonial-quote {
+      font-size: 13px;
+      color: var(--text-main);
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .testimonial-quote::before {
+      content: "“";
+      position: absolute;
+      left: 0;
+      top: -4px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    .testimonial-meta {
+      margin-top: 4px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .testimonial-meta strong {
+      color: #e5e7eb;
+    }
+
+    .testimonial-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-self: flex-end;
+    }
+
+    .testimonial-nav button {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.96);
+      color: var(--text-muted);
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .testimonial-nav button:hover {
+      background: rgba(30, 64, 175, 0.9);
+      color: #e5e7eb;
+      border-color: rgba(59, 130, 246, 0.9);
+      transform: translateY(-1px);
+    }
+
+    .testimonial-count {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    footer.site-footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #020617;
+      border-color: transparent;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 640px) {
+      header.site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav.site-nav {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand-mark">
+        <div class="brand-logo"></div>
+        <div class="brand-text">
+          <div class="name">Niraj Sharan</div>
+          <div class="title">Strategic Digital Partnerships & Product Leader</div>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <a href="#timeline">Career</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#testimonials">Voices</a>
+        <a href="#contact" class="nav-cta">
+          Let’s talk
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Strategic partnership & business analysis leader</span>
+          </div>
+          <h1>
+            Building <span class="highlight">high-impact digital ecosystems</span> that ship, scale, and sustain.
+          </h1>
+          <p class="hero-sub">
+            12+ years orchestrating fintech, loyalty, and digital partnership ecosystems that unlock revenue, elevate customer experience, and keep regulatory guardrails rock solid.
+          </p>
+          <div class="hero-metrics">
+            <div class="hero-chip">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              <span><strong>48%</strong> YoY digital payments growth</span>
+            </div>
+            <div class="hero-chip">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <span><strong>35%</strong> app adoption uplift</span>
+            </div>
+            <div class="hero-chip">
+              <i class="fa-solid fa-coins"></i>
+              <span><strong>100M+</strong> business impact delivered</span>
+            </div>
+            <div class="hero-chip">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span><strong>100%</strong> regulatory compliance</span>
+            </div>
+          </div>
+          <div class="typing-line">
+            <div class="typing-label">Positioned as</div>
+            <div class="typing-pills">
+              <div class="typing-pill">
+                <span id="typing-text"></span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="downloadResume()">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download Resume</span>
+            </button>
+            <button class="btn-ghost" onclick="document.querySelector('#timeline').scrollIntoView({behavior:'smooth'});">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span>Explore the work</span>
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-avatar">NS</div>
+            <div class="profile-meta">
+              <h2>Niraj Sharan</h2>
+              <div class="role">Digital Partnership Architect & P&L Owner</div>
+              <div class="profile-tags">
+                <span class="profile-tag">Fintech & Digital Payments</span>
+                <span class="profile-tag">Loyalty & Rewards</span>
+                <span class="profile-tag">Regulatory-first Design</span>
+              </div>
+            </div>
+          </div>
+          <div class="side-badges">
+            <div class="side-badge">
+              <div>
+                <div><strong>Flipkart • Program Manager, Loyalty Partnerships</strong></div>
+                <div>Scaling SuperCoin 3P ecosystem & partner impact.</div>
+              </div>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="side-badge">
+              <div>
+                <div><strong>Mahindra Finance • Product Manager, Digital Collections</strong></div>
+                <div>BBPS-led payments framework, 33% fintech adoption jump.</div>
+              </div>
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="side-badge">
+              <div>
+                <div><strong>RenewBuy, Clix, Aadhar, ICICI Bank</strong></div>
+                <div>Partnership-led growth across insurance & housing finance.</div>
+              </div>
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="timeline">
+        <div class="section-heading">
+          <div class="section-title">
+            <span class="bar"></span>
+            <span>Career timeline</span>
+          </div>
+          <p class="section-subtitle">
+            A progression from regional marketing to ecosystem-scale digital partnerships, with expanding ownership across product, P&amp;L, and strategic alliances.
+          </p>
+        </div>
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <article class="timeline-card" data-timeline="flipkart">
+                <div class="timeline-header">
+                  <div>
+                    <div class="timeline-role">Program Manager, Loyalty Partnerships</div>
+                    <div class="timeline-meta">
+                      <span><i class="fa-solid fa-building"></i> Flipkart Internet Pvt Ltd</span>
+                      <span><i class="fa-regular fa-calendar"></i> Sep 2024 – Present</span>
+                      <span><i class="fa-solid fa-location-dot"></i> India</span>
+                    </div>
+                  </div>
+                  <div class="timeline-toggle">
+                    <span>Details</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Spearheading the strategic evolution of Flipkart’s 3P loyalty ecosystem, translating SuperCoin vision into measurable partner and customer outcomes.
+                </p>
+                <div class="timeline-pill-row">
+                  <span class="timeline-pill">3P loyalty ecosystem</span>
+                  <span class="timeline-pill">SuperCoin redemption +15%</span>
+                  <span class="timeline-pill">Regulatory excellence</span>
+                </div>
+                <div class="timeline-details">
+                  <ul>
+                    <li>Architected and launched program development for the 3P loyalty ecosystem, tightly aligning SuperCoin strategy with platform-wide engagement objectives.</li>
+                    <li>Drove a 15% increase in SuperCoin redemption via strategic product roadmap, cross-functional collaboration, and outcome-focused delivery.</li>
+                    <li>Expanded partner integrations by 4% and customer engagement metrics by 3% through systematic onboarding and product optimization.</li>
+                    <li>Led cross-functional teams across Engineering, Business, and Delivery while maintaining 100% regulatory compliance in loyalty operations.</li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <article class="timeline-card" data-timeline="mahindra">
+                <div class="timeline-header">
+                  <div>
+                    <div class="timeline-role">Product Manager, Digital Collection Partnerships</div>
+                    <div class="timeline-meta">
+                      <span><i class="fa-solid fa-building"></i> Mahindra Finance</span>
+                      <span><i class="fa-regular fa-calendar"></i> Mar 2022 – Sep 2024</span>
+                    </div>
+                  </div>
+                  <div class="timeline-toggle">
+                    <span>Details</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Owned BBPS-powered digital collections, P&amp;L, and fintech alliances to scale payment adoption while keeping RBI compliance uncompromised.
+                </p>
+                <div class="timeline-pill-row">
+                  <span class="timeline-pill">BBPS framework</span>
+                  <span class="timeline-pill">Digital payments +48% YoY</span>
+                  <span class="timeline-pill">App adoption +35%</span>
+                </div>
+                <div class="timeline-details">
+                  <ul>
+                    <li>Designed a digital partnership framework for BBPS payments, onboarding fintech partners that lifted fintech adoption by 33% within six months.</li>
+                    <li>Integrated payment capabilities into the mobile app, boosting app adoption by 35% and strengthening digital-first engagement.</li>
+                    <li>Led commercial negotiations that reduced transaction costs by 7% and contributed to 48% YoY digital payments revenue growth.</li>
+                    <li>Managed P&amp;L across BBPS, payment gateway, and CMS while maintaining flawless RBI compliance and SLA adherence.</li>
+                    <li>Owned multi-channel escalation management and process optimization, reducing repeat escalations and enhancing service reliability.</li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <article class="timeline-card" data-timeline="renewbuy">
+                <div class="timeline-header">
+                  <div>
+                    <div class="timeline-role">Partnership Product Manager, Health Insurance</div>
+                    <div class="timeline-meta">
+                      <span><i class="fa-solid fa-building"></i> RenewBuy.com</span>
+                      <span><i class="fa-regular fa-calendar"></i> Aug 2019 – Jan 2021</span>
+                    </div>
+                  </div>
+                  <div class="timeline-toggle">
+                    <span>Details</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Owned insurer partnerships and digital insurance SaaS evolution, driving platform utilization and retention via UX, analytics, and targeted campaigns.
+                </p>
+                <div class="timeline-pill-row">
+                  <span class="timeline-pill">Insurer partnerships</span>
+                  <span class="timeline-pill">Platform usage +55%</span>
+                  <span class="timeline-pill">Customer penetration +140%</span>
+                </div>
+                <div class="timeline-details">
+                  <ul>
+                    <li>Integrated digital insurance SaaS with leading insurers, increasing platform utilization by 55% and strengthening partner stickiness.</li>
+                    <li>Redesigned website and app experiences, driving higher adoption and positioning RenewBuy as a digital-first health insurance platform.</li>
+                    <li>Launched campaigns that lifted adoption by 42% and customer satisfaction scores by 14%.</li>
+                    <li>Improved online sales contribution from 23% to 58% in one year through product and go-to-market initiatives.</li>
+                    <li>Expanded customer penetration by 140% through better service, product fit, and on-ground partnership support.</li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <article class="timeline-card" data-timeline="clix">
+                <div class="timeline-header">
+                  <div>
+                    <div class="timeline-role">Product Marketing Manager, Home Loans</div>
+                    <div class="timeline-meta">
+                      <span><i class="fa-solid fa-building"></i> Clix Housing Finance Ltd.</span>
+                      <span><i class="fa-regular fa-calendar"></i> Jun 2018 – Aug 2019</span>
+                    </div>
+                  </div>
+                  <div class="timeline-toggle">
+                    <span>Details</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Built fintech alliances, vendor ecosystems, and financial plans that scaled home loan visibility, cost efficiency, and PMAY-led inclusion.
+                </p>
+                <div class="timeline-pill-row">
+                  <span class="timeline-pill">Fintech alliances</span>
+                  <span class="timeline-pill">Lead gen +20%</span>
+                  <span class="timeline-pill">Cost efficiency +15%</span>
+                </div>
+                <div class="timeline-details">
+                  <ul>
+                    <li>Forged digital alliances with major fintech platforms (e.g., PaisaBazaar), increasing lead generation by 20%.</li>
+                    <li>Partnered with NHB to integrate Pradhan Mantri Awas Yojana, lifting program applications by 15%.</li>
+                    <li>Led vendor empanelment and onboarding automation, raising efficiency and operational control.</li>
+                    <li>Designed financial strategies and budgets that improved cost efficiency by 15% while fully aligning with long-term goals.</li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <article class="timeline-card" data-timeline="aadhar">
+                <div class="timeline-header">
+                  <div>
+                    <div class="timeline-role">Product Manager, Home Loans</div>
+                    <div class="timeline-meta">
+                      <span><i class="fa-solid fa-building"></i> Aadhar Housing Finance Ltd.</span>
+                      <span><i class="fa-regular fa-calendar"></i> Oct 2017 – Jun 2018</span>
+                    </div>
+                  </div>
+                  <div class="timeline-toggle">
+                    <span>Details</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Orchestrated pan-India commission programs and analytics, improving financial transparency and forecast accuracy.
+                </p>
+                <div class="timeline-pill-row">
+                  <span class="timeline-pill">Commission analytics</span>
+                  <span class="timeline-pill">Reporting time -25%</span>
+                  <span class="timeline-pill">Forecast accuracy +18%</span>
+                </div>
+                <div class="timeline-details">
+                  <ul>
+                    <li>Coordinated across HR, Legal, Finance, Sales, Operations, and BI to ensure accurate, on-time sales commission payouts.</li>
+                    <li>Streamlined financial operations, cutting reporting time by 25% and improving transparency.</li>
+                    <li>Analyzed financial data to enhance revenue forecasting accuracy by 18% and identify profitability opportunities.</li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <article class="timeline-card" data-timeline="icici">
+                <div class="timeline-header">
+                  <div>
+                    <div class="timeline-role">Regional Marketing & Product Manager, Home Loans</div>
+                    <div class="timeline-meta">
+                      <span><i class="fa-solid fa-building"></i> ICICI Bank Ltd.</span>
+                      <span><i class="fa-regular fa-calendar"></i> Nov 2012 – Oct 2017</span>
+                    </div>
+                  </div>
+                  <div class="timeline-toggle">
+                    <span>Details</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Led regional marketing, branch expansion, and digital channel initiatives, laying the foundation for partnership-led growth.
+                </p>
+                <div class="timeline-pill-row">
+                  <span class="timeline-pill">13 new branches</span>
+                  <span class="timeline-pill">Lead gen +20%</span>
+                  <span class="timeline-pill">Digital channel strategy</span>
+                </div>
+                <div class="timeline-details">
+                  <ul>
+                    <li>Executed campaigns that increased lead generation by 20% while optimizing marketing spend.</li>
+                    <li>Managed launch of 13 new branches, improving regional visibility and business penetration by 25%.</li>
+                    <li>Owned home loan product roadmaps, including digital channel features and partnership-led expansions.</li>
+                    <li>Launched digital solutions via strategic partnerships, expanding customer reach by 20%.</li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <div class="section-title">
+            <span class="bar"></span>
+            <span>Project vault</span>
+          </div>
+          <p class="section-subtitle">
+            A selection of outcomes that show how partnership strategy, product thinking, and analytics convert complex problems into measurable business impact.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card" data-project="flipkart-supercoin">
+            <div class="project-tag">
+              <i class="fa-solid fa-coins"></i>
+              Loyalty & Rewards
+            </div>
+            <div class="project-title">SuperCoin 3P Loyalty Ecosystem Evolution</div>
+            <div class="project-meta">Flipkart • Program Manager, Loyalty Partnerships</div>
+            <div class="project-pill-row">
+              <span class="project-pill">Ecosystem design</span>
+              <span class="project-pill">Product roadmap</span>
+              <span class="project-pill">Redemption uplift</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="mahindra-bbps">
+            <div class="project-tag">
+              <i class="fa-solid fa-sack-dollar"></i>
+              Fintech & Collections
+            </div>
+            <div class="project-title">BBPS Digital Collections Partnership Framework</div>
+            <div class="project-meta">Mahindra Finance • Product Manager, Digital Collections</div>
+            <div class="project-pill-row">
+              <span class="project-pill">BBPS integration</span>
+              <span class="project-pill">+33% fintech adoption</span>
+              <span class="project-pill">RBI compliance</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="mahindra-app">
+            <div class="project-tag">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              Product & CX
+            </div>
+            <div class="project-title">In-app Payments & Adoption Uplift</div>
+            <div class="project-meta">Mahindra Finance • Digital-first experience</div>
+            <div class="project-pill-row">
+              <span class="project-pill">App monetization</span>
+              <span class="project-pill">+35% adoption</span>
+              <span class="project-pill">Cross-functional delivery</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="renewbuy-saas">
+            <div class="project-tag">
+              <i class="fa-solid fa-heart-pulse"></i>
+              Insurtech
+            </div>
+            <div class="project-title">Digital Health Insurance SaaS Integration</div>
+            <div class="project-meta">RenewBuy • Partnership Product Manager</div>
+            <div class="project-pill-row">
+              <span class="project-pill">Insurer integration</span>
+              <span class="project-pill">+55% utilization</span>
+              <span class="project-pill">UX redesign</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="renewbuy-sales">
+            <div class="project-tag">
+              <i class="fa-solid fa-chart-line"></i>
+              Growth & GTM
+            </div>
+            <div class="project-title">Online Sales Acceleration & Penetration</div>
+            <div class="project-meta">RenewBuy • Product & Analytics</div>
+            <div class="project-pill-row">
+              <span class="project-pill">Sales forecasting</span>
+              <span class="project-pill">Online sales 23% → 58%</span>
+              <span class="project-pill">+140% penetration</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="clix-pmay">
+            <div class="project-tag">
+              <i class="fa-solid fa-house-circle-check"></i>
+              Housing Finance
+            </div>
+            <div class="project-title">PMAY Integration & Fintech Alliances</div>
+            <div class="project-meta">Clix Housing Finance • Product Marketing Manager</div>
+            <div class="project-pill-row">
+              <span class="project-pill">Government program</span>
+              <span class="project-pill">Fintech partnerships</span>
+              <span class="project-pill">+15% PMAY apps</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <div class="section-title">
+            <span class="bar"></span>
+            <span>Skills graph</span>
+          </div>
+          <p class="section-subtitle">
+            A balanced blend of strategic partnership leadership, business analysis, and digital execution, grounded in data and agile delivery.
+          </p>
+        </div>
+        <div class="skills-layout">
+          <div class="skills-card" id="skills-bars">
+            <h3>Core capabilities</h3>
+            <p>Relative proficiency across the skills that show up most consistently in outcomes, responsibilities, and impact.</p>
+
+            <div class="skill-row" data-level="96">
+              <div class="skill-label">Digital partnership strategy</div>
+              <div class="skill-meter"><div class="skill-fill"></div></div>
+              <div class="skill-score">9.6</div>
+            </div>
+            <div class="skill-row" data-level="93">
+              <div class="skill-label">Ecosystem &amp; alliance design</div>
+              <div class="skill-meter"><div class="skill-fill"></div></div>
+              <div class="skill-score">9.3</div>
+            </div>
+            <div class="skill-row" data-level="92">
+              <div class="skill-label">Strategic business analysis</div>
+              <div class="skill-meter"><div class="skill-fill"></div></div>
+              <div class="skill-score">9.2</div>
+            </div>
+            <div class="skill-row" data-level="91">
+              <div class="skill-label">Product &amp; P&amp;L ownership</div>
+              <div class="skill-meter"><div class="skill-fill"></div></div>
+              <div class="skill-score">9.1</div>
+            </div>
+            <div class="skill-row" data-level="90">
+              <div class="skill-label">Fintech &amp; payments (BBPS, PG, CMS)</div>
+              <div class="skill-meter"><div class="skill-fill"></div></div>
+              <div class="skill-score">9.0</div>
+            </div>
+            <div class="skill-row" data-level="88">
+              <div class="skill-label">Regulatory &amp; compliance (RBI, PMAY, KYC)</div>
+              <div class="skill-meter"><div class="skill-fill"></div></div>
+              <div class="skill-score">8.8</div>
+            </div>
+            <div class="skill-row" data-level="87">
+              <div class="skill-label">Data analytics &amp; BI (Excel, MIS)</div>
+              <div class="skill-meter"><div class="skill-fill"></div></div>
+              <div class="skill-score">8.7</div>
+            </div>
+            <div class="skill-row" data-level="86">
+              <div class="skill-label">Cross-functional leadership</div>
+              <div class="skill-meter"><div class="skill-fill"></div></div>
+              <div class="skill-score">8.6</div>
+            </div>
+          </div>
+          <div class="skills-card">
+            <h3>Operating toolkit</h3>
+            <p>Methods, certifications, and soft skills that support how work gets done at scale and pace.</p>
+            <div class="skills-cloud">
+              <span class="tag-soft">Agile &amp; Scrum (CSPO, CSM)</span>
+              <span class="tag-soft">SAFe 6.0 Agilist</span>
+              <span class="tag-soft">Lean Six Sigma Green Belt</span>
+              <span class="tag-soft">Stakeholder communication</span>
+              <span class="tag-soft">Executive-ready storytelling</span>
+              <span class="tag-soft">Commercial negotiation</span>
+              <span class="tag-soft">Partner governance</span>
+              <span class="tag-soft">Ecosystem scaling</span>
+              <span class="tag-soft">Go-to-market planning</span>
+              <span class="tag-soft">Campaign analytics &amp; ROI</span>
+              <span class="tag-soft">Mentorship &amp; team building</span>
+              <span class="tag-soft">Market research &amp; benchmarking</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonials">
+        <div class="section-heading">
+          <div class="section-title">
+            <span class="bar"></span>
+            <span>Testimonials</span>
+          </div>
+          <p class="section-subtitle">
+            Representative voices from leaders who could speak to how partnership thinking, execution rigor, and people leadership show up in everyday work.
+          </p>
+        </div>
+        <div class="testimonials-shell">
+          <div>
+            <div class="testimonial-quote" id="testimonial-quote"></div>
+            <div class="testimonial-meta" id="testimonial-meta"></div>
+          </div>
+          <div class="testimonial-nav">
+            <button type="button" id="testimonial-prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" id="testimonial-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="testimonial-count" id="testimonial-count"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>Open to Head of Digital Partnerships, Director/VP Partnerships, and strategic product leadership roles across fintech and digital ecosystems.</div>
+      <div class="footer-links">
+        <a href="mailto:niraj.sharan@example.com" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/example-niraj-sharan" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const typingPhrases = [
+      "Strategic Leader",
+      "Digital Partnership Architect",
+      "Business Analysis Leader",
+      "Fintech & Digital Payments Specialist",
+      "P&L Owner",
+      "Ecosystem Builder",
+      "Outcome-Obsessed Problem Solver"
+    ];
+    const typingElement = document.getElementById("typing-text");
+    let typingIndex = 0;
+    let charIndex = 0;
+    let typingForward = true;
+    let typingPause = 0;
+
+    function typeLoop() {
+      if (!typingElement) return;
+      const current = typingPhrases[typingIndex];
+
+      if (typingForward) {
+        if (charIndex <= current.length) {
+          typingElement.textContent = current.slice(0, charIndex);
+          charIndex++;
+        } else {
+          typingForward = false;
+          typingPause = 24;
+        }
+      } else {
+        if (typingPause > 0) {
+          typingPause--;
+        } else if (charIndex > 0) {
+          charIndex--;
+          typingElement.textContent = current.slice(0, charIndex);
+        } else {
+          typingForward = true;
+          typingIndex = (typingIndex + 1) % typingPhrases.length;
+        }
+      }
+      requestAnimationFrame(() => setTimeout(typeLoop, 70));
+    }
+    typeLoop();
+
+    function downloadResume() {
+      const blob = new Blob(["Resume placeholder — replace href with actual file link when deploying."], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Niraj-Sharan-Resume.txt";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    document.querySelectorAll(".timeline-card").forEach(card => {
+      const toggle = card.querySelector(".timeline-toggle");
+      const details = card.querySelector(".timeline-details");
+      if (!toggle || !details) return;
+      toggle.addEventListener("click", e => {
+        e.stopPropagation();
+        details.classList.toggle("open");
+        const icon = toggle.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("fa-chevron-down");
+          icon.classList.toggle("fa-chevron-up");
+        }
+      });
+      card.addEventListener("click", () => {
+        details.classList.toggle("open");
+        const icon = toggle.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("fa-chevron-down");
+          icon.classList.toggle("fa-chevron-up");
+        }
+      });
+    });
+
+    const modalBackdrop = document.createElement("div");
+    modalBackdrop.className = "modal-backdrop";
+    modalBackdrop.innerHTML = `
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <header class="modal-header">
+          <div class="modal-tagline">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span id="modal-tagline"></span>
+          </div>
+          <div class="modal-title" id="modal-title"></div>
+          <div class="modal-subtitle" id="modal-subtitle"></div>
+        </header>
+        <div class="modal-grid">
+          <section class="star-block">
+            <div class="star-label">Situation</div>
+            <div class="star-body" id="modal-situation"></div>
+          </section>
+          <section class="star-block">
+            <div class="star-label">Task / Challenge</div>
+            <div class="star-body" id="modal-task"></div>
+          </section>
+          <section class="star-block">
+            <div class="star-label">Action</div>
+            <div class="star-body" id="modal-action"></div>
+          </section>
+          <section class="star-block">
+            <div class="star-label">Result</div>
+            <div class="star-body" id="modal-result"></div>
+          </section>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modalBackdrop);
+
+    const projectData = {
+      "flipkart-supercoin": {
+        tagline: "Loyalty ecosystem redesign",
+        title: "Scaling Flipkart’s SuperCoin 3P Loyalty Ecosystem",
+        subtitle: "Program Manager, Loyalty Partnerships • Flipkart",
+        situation: "Flipkart wanted to evolve its third-party SuperCoin ecosystem to deepen customer engagement, increase redemption, and deliver more visible value to partners within a crowded loyalty landscape.",
+        task: "Design a cohesive 3P loyalty program architecture, align it with the core SuperCoin strategy, and deliver measurable growth in redemption and partner engagement, without sacrificing regulatory rigor.",
+        action: "Architected a comprehensive 3P loyalty program framework, translating SuperCoin strategy into concrete use cases, partner propositions, and governance models. Orchestrated cross-functional collaboration across Product, Engineering, Business, and Delivery to define roadmaps, prioritize features, and embed operational guardrails. Structured partner onboarding journeys, performance metrics, and experimentation loops to continuously optimize value for both customers and ecosystem partners.",
+        result: "Delivered a 15% increase in SuperCoin redemption, improved partner integration coverage by 4%, and lifted engagement metrics by 3%. Established a scalable blueprint for loyalty ecosystem evolution that can support future 3P expansion while maintaining 100% compliance and operational reliability."
+      },
+      "mahindra-bbps": {
+        tagline: "Digital collections at scale",
+        title: "Building the BBPS Digital Collections Partnership Framework",
+        subtitle: "Product Manager, Digital Collection Partnerships • Mahindra Finance",
+        situation: "Collections processes were fragmented across channels, with limited digital payment adoption and an opportunity to ride BBPS rails and fintech partnerships to improve customer experience and cash flow.",
+        task: "Create a digital partnership framework around BBPS and other payment rails, onboard the right fintech players, and drive both adoption and profitability while staying fully aligned with RBI guidelines.",
+        action: "Designed an end-to-end digital partnership framework covering partner evaluation, onboarding, commercial models, and technical integration for BBPS-powered collections. Collaborated with Business, Engineering, Legal, Finance, and Compliance to define BRDs, run PoCs, coordinate UAT, and plan GTM launches. Negotiated commercials with partners to reduce per-transaction costs and codified escalation and SLA structures for reliable operations.",
+        result: "Increased fintech-driven adoption by 33% within six months, contributed to 48% YoY growth in digital payments revenue, and reduced transaction costs by 7%. Established a repeatable model for adding new partners and channels without compromising RBI compliance or customer experience."
+      },
+      "mahindra-app": {
+        tagline: "App-led adoption & monetization",
+        title: "Driving In-app Payment Adoption & Digital Engagement",
+        subtitle: "Product Manager, Digital Collection Partnerships • Mahindra Finance",
+        situation: "The mobile app had room to become a primary collections and engagement channel, but payments were under-utilized and customer journeys were not fully optimized for digital-first behaviour.",
+        task: "Embed frictionless payment experiences into the mobile app, increase active usage, and ensure collections journeys feel native, intuitive, and trustworthy for customers across segments.",
+        action: "Partnered with Design, Engineering, and Business stakeholders to define user journeys, prioritize payment features, and integrate BBPS and gateway capabilities into the app. Crafted GTM and in-app messaging, aligned marketing campaigns around key use cases, and set up analytics instrumentation to track adoption, drop-offs, and repeat usage. Continuously iterated on flows based on customer feedback and data signals.",
+        result: "Generated a 35% increase in app adoption and strengthened digital-first engagement in the collections context. Created a platform foundation where future payment and partnership features could be layered with minimal friction and high observability of performance."
+      },
+      "renewbuy-saas": {
+        tagline: "Insurer SaaS integration",
+        title: "Integrating Digital Health Insurance SaaS with Leading Insurers",
+        subtitle: "Partnership Product Manager, Health Insurance • RenewBuy",
+        situation: "RenewBuy sought to differentiate its health insurance offering by deepening digital integration with insurers, improving platform experience, and increasing utilization of its SaaS capabilities.",
+        task: "Evaluate and prioritize insurer partnerships, integrate their products through a cohesive SaaS layer, and redesign platform experiences to drive usage and satisfaction across agents and end customers.",
+        action: "Conducted comprehensive market and product analysis across indemnity and benefit plans, CSR positioning, and competitor moves. Collaborated with insurers to integrate digital insurance SaaS interfaces, streamline workflows, and simplify case submissions. Led the redesign of the website and app UI, ensuring clarity of benefits, plan comparisons, and buying journeys. Supported change management with training and marketing content for internal and external stakeholders.",
+        result: "Achieved a 55% increase in platform utilization, improved customer retention by 15%, and repositioned RenewBuy as a digital-forward partner for insurers. Created a more modular SaaS foundation that could support additional products and future integrations with minimal rework."
+      },
+      "renewbuy-sales": {
+        tagline: "Digital growth engine",
+        title: "Accelerating Online Sales & Customer Penetration",
+        subtitle: "Partnership Product Manager, Health Insurance • RenewBuy",
+        situation: "Online channels were under-leveraged relative to their potential, and leadership wanted a sharper analytics- and campaign-led approach to driving digital sales and deepening penetration.",
+        task: "Redesign the analytics and reporting stack, run targeted campaigns, and align sales and product around a shared view of funnels, conversion, and revenue drivers to grow online contribution.",
+        action: "Built and refined forecasting models, MIS reports, and interactive dashboards that surfaced performance by product, region, and partner. Partnered with Marketing to launch segmented campaigns focused on high-potential cohorts and tailored product narratives. Used on-ground feedback and customer research to refine propositions, remove friction in journeys, and align incentives across partners and internal teams.",
+        result: "Increased online sales contribution from 23% to 58% within one year, improved customer penetration by 140%, and lifted customer satisfaction scores by 14%. Provided leadership with a clear, data-backed view of where to invest next across channels and products."
+      },
+      "clix-pmay": {
+        tagline: "Housing finance inclusion",
+        title: "PMAY Integration & Fintech-led Distribution for Home Loans",
+        subtitle: "Product Marketing Manager, Home Loans • Clix Housing Finance",
+        situation: "Clix wanted to expand home loan reach, particularly within PMAY-eligible segments, while leveraging digital channels and fintech partners to source quality leads efficiently.",
+        task: "Integrate PMAY flows into the business, build fintech alliances to expand distribution, and ensure financial planning and vendor operations can support growth without losing control.",
+        action: "Collaborated with the National Housing Bank to complete PMAY registration and embed scheme requirements into product and process design. Established alliances with fintech aggregators such as PaisaBazaar to tap into digital demand. Led pan-India vendor empanelment, onboarding, and training to support resulting volumes. Developed budgets and cost-efficiency plans for the home loan unit to ensure sustainable growth.",
+        result: "Lifted PMAY applications by 15% and increased overall lead generation via fintech alliances by 20%. Improved cost efficiency by 15% through tighter financial planning and vendor management, while maintaining compliance with housing finance regulations."
+      }
+    };
+
+    const projectCards = document.querySelectorAll(".project-card");
+    const modalTagline = modalBackdrop.querySelector("#modal-tagline");
+    const modalTitle = modalBackdrop.querySelector("#modal-title");
+    const modalSubtitle = modalBackdrop.querySelector("#modal-subtitle");
+    const modalSituation = modalBackdrop.querySelector("#modal-situation");
+    const modalTask = modalBackdrop.querySelector("#modal-task");
+    const modalAction = modalBackdrop.querySelector("#modal-action");
+    const modalResult = modalBackdrop.querySelector("#modal-result");
+    const modalCloseBtn = modalBackdrop.querySelector(".modal-close");
+
+    projectCards.forEach(card => {
+      card.addEventListener("click", () => {
+        const key = card.getAttribute("data-project");
+        const data = projectData[key];
+        if (!data) return;
+        modalTagline.textContent = data.tagline;
+        modalTitle.textContent = data.title;
+        modalSubtitle.textContent = data.subtitle;
+        modalSituation.textContent = data.situation;
+        modalTask.textContent = data.task;
+        modalAction.textContent = data.action;
+        modalResult.textContent = data.result;
+        modalBackdrop.classList.add("open");
+      });
+    });
+
+    modalCloseBtn.addEventListener("click", () => {
+      modalBackdrop.classList.remove("open");
+    });
+
+    modalBackdrop.addEventListener("click", e => {
+      if (e.target === modalBackdrop) {
+        modalBackdrop.classList.remove("open");
+      }
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        modalBackdrop.classList.remove("open");
+      }
+    });
+
+    const skillSection = document.getElementById("skills-bars");
+    const skillRows = skillSection ? skillSection.querySelectorAll(".skill-row") : [];
+    function animateSkills() {
+      skillRows.forEach(row => {
+        const level = Number(row.getAttribute("data-level") || "0");
+        const fill = row.querySelector(".skill-fill");
+        if (fill) {
+          fill.style.transform = "scaleX(" + (level / 100) + ")";
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateSkills();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.35 });
+
+    if (skillSection) {
+      observer.observe(skillSection);
+    }
+
+    const testimonials = [
+      {
+        quote: "Niraj consistently turns ambiguous partnership ideas into executable programs with clear KPIs. He is one of the rare leaders who can talk strategy with the CEO in the morning and debug operational details with the team in the afternoon.",
+        name: "Former CEO",
+        title: "Digital Lending & Collections Fintech"
+      },
+      {
+        quote: "What stands out about Niraj is his ability to translate regulatory and risk constraints into smart product and ecosystem design instead of treating them as blockers. This made our compliance conversations dramatically easier.",
+        name: "Senior Leader, Compliance",
+        title: "Large NBFC"
+      },
+      {
+        quote: "He brings a data-backed, partnership-first mindset to every initiative. Our campaigns and product launches were sharper, faster, and more commercially grounded because he pushed for clarity on the ‘why’ and ‘how’ before execution.",
+        name: "Head of Marketing",
+        title: "Insurtech Platform"
+      },
+      {
+        quote: "Niraj is a natural cross-functional leader. Engineers, business teams, partners, and senior stakeholders trust him because he does the hard work of understanding each perspective and stitching them together into a coherent plan.",
+        name: "Senior Product Leader",
+        title: "Consumer Internet Company"
+      }
+    ];
+
+    const quoteEl = document.getElementById("testimonial-quote");
+    const metaEl = document.getElementById("testimonial-meta");
+    const countEl = document.getElementById("testimonial-count");
+    const prevBtn = document.getElementById("testimonial-prev");
+    const nextBtn = document.getElementById("testimonial-next");
+    let testimonialIndex = 0;
+    let testimonialTimer;
+
+    function renderTestimonial(index) {
+      const t = testimonials[index];
+      if (!quoteEl || !metaEl || !countEl) return;
+      quoteEl.textContent = t.quote;
+      metaEl.innerHTML = "<strong>" + t.name + "</strong> • " + t.title;
+      countEl.textContent = (index + 1) + " / " + testimonials.length;
+    }
+
+    function nextTestimonial() {
+      testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+      renderTestimonial(testimonialIndex);
+    }
+
+    function prevTestimonialFn() {
+      testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+      renderTestimonial(testimonialIndex);
+    }
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener("click", () => {
+        prevTestimonialFn();
+        resetTestimonialTimer();
+      });
+      nextBtn.addEventListener("click", () => {
+        nextTestimonial();
+        resetTestimonialTimer();
+      });
+    }
+
+    function resetTestimonialTimer() {
+      if (testimonialTimer) clearInterval(testimonialTimer);
+      testimonialTimer = setInterval(nextTestimonial, 9000);
+    }
+
+    renderTestimonial(testimonialIndex);
+    resetTestimonialTimer();
+  </script>
+</body>
+</html>
